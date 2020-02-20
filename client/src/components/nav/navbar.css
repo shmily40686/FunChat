@@ -1,0 +1,42 @@
+.nav-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(243, 243, 243);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    font-size: 30px;
+    color: #888;
+    margin-right: 10px;
+}
+
+.loginButton{
+    background-color: #07c160;
+    border-color: #07c160;
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    padding: 8px 15px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.35135;
+    border-radius: 5px;
+    margin-right: 10px;
+    outLine:none;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
