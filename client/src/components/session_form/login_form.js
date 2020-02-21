@@ -116,50 +116,57 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-          <div className="session-form">
-              <h1>Log In</h1>
-              <button className="close-form" type="button" onClick={() => this.props.history.push("/")}>×</button>
-                <form onSubmit={this.handleSubmit} className="signup-form">
-                    <div className="session-inputs">
-                        {/* <br /> */}
-                        <input type="text"
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                            placeholder="Email"
-                            className="login-input"
-                        />
-                        <div className="session-errors">{this.renderErrors("email")}</div>
-                        {/* <br /> */}
-                        <input type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                            placeholder="Password"
-                            className="login-input"
-                        />
-                        <div className="session-errors">{this.renderErrors("password")}</div>
-                        {/* <br /> */}
-                        <input type="submit" value="Submit" className="session-submit" />
+          <div>
+                <div className="background-video">
+                    <video loop autoPlay muted style={{width:"100%"}}>
+                        <source src='./background2.mp4' type="video/mp4" />
+                    </video>
+                </div>
+                <div className="session-form">
+                    <h1>Log In</h1>
+                    <button className="close-form" type="button" onClick={() => this.props.history.push("/")}>×</button>
+                    <form onSubmit={this.handleSubmit} className="signup-form">
+                        <div className="session-inputs">
+                            {/* <br /> */}
+                            <input type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                                placeholder="Email"
+                                className="login-input"
+                            />
+                            <div className="session-errors">{this.renderErrors("email")}</div>
+                            {/* <br /> */}
+                            <input type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                                placeholder="Password"
+                                className="login-input"
+                            />
+                            <div className="session-errors">{this.renderErrors("password")}</div>
+                            {/* <br /> */}
+                            <input type="submit" value="Submit" className="session-submit" />
 
-                    </div>
-                    <p className="session-footer">Don't have an accont? &nbsp;
+                        </div>
+                        <p className="session-footer">Don't have an accont? &nbsp;
                        <button
-                            className="session-footer-button"
-                            type="button"
-                            onClick={() => this.props.history.push('/signup')}>Sign up
+                                className="session-footer-button"
+                                type="button"
+                                onClick={() => this.props.history.push('/signup')}>Sign up
                        </button>.
                    </p>
-                    <p className="session-footer">
-                        Can't commit? Explore our site with a &nbsp;
+                        <p className="session-footer">
+                            Can't commit? Explore our site with a &nbsp;
                     <button
-                            className="session-footer-button"
-                            type="button"
-                            onClick={this.handleDemoSubmit}
-                        >
-                            demo login
+                                className="session-footer-button"
+                                type="button"
+                                onClick={this.handleDemoSubmit}
+                            >
+                                demo login
                   </button>.
                   </p>
-                </form>
-            </div>
+                    </form>
+                </div>
+          </div>
         );
     }
 }

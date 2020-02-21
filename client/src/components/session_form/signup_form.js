@@ -121,64 +121,72 @@ class SignupForm extends React.Component {
 
     render() {
         return (
-              <div className="session-form">
-                 <h1>Sign Up</h1>
-                 <button className="close-form" type="button" onClick={this.props.closeModal}>×</button>
-                 <form onSubmit={this.handleSubmit} className="signup-form">
-                    <div className="session-inputs">
-                        <input type="text"
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                            placeholder="Email"
-                            className="login-input"
-                        />
-                        <div className="session-errors">{this.renderErrors("email")}</div>
-                        <input type="text"
-                            value={this.state.handle}
-                            onChange={this.update('username')}
-                            placeholder="Username"
-                            className="login-input"
-                            id="handle"
-                        />
-                        <div className="session-errors">{this.renderErrors("username")}</div>
-                        <input type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                            placeholder="Password"
-                            className="login-input"
-                            id="password"
-                        />
-                        <div className="session-errors">{this.renderErrors("password")}</div>
-                        <input type="password"
+              <div>
+                <div className="background-video">
+                    <video loop autoPlay muted style={{ width: "100%" }} >
+                        <source src='./background.mp4' type="video/mp4" />
+                    </video>
+                </div>
+                <div className="session-form">
+                    <h1>Sign Up</h1>
+                    <button className="close-form" type="button" onClick={() => this.props.history.push("/")}>×</button>
+                    <form onSubmit={this.handleSubmit} className="signup-form">
+                        <div className="session-inputs">
+                            <input type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                                placeholder="Email"
+                                className="login-input"
+                            />
+                            <div className="session-errors">{this.renderErrors("email")}</div>
+                            <input type="text"
+                                value={this.state.handle}
+                                onChange={this.update('username')}
+                                placeholder="Username"
+                                className="login-input"
+                                id="handle"
+                            />
+                            <div className="session-errors">{this.renderErrors("username")}</div>
+                            <input type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                                placeholder="Password"
+                                className="login-input"
+                                id="password"
+                            />
+                            <div className="session-errors">{this.renderErrors("password")}</div>
+                            <input type="password"
                                 value={this.state.password2}
-                            onChange={this.update('password2')}
-                            placeholder="Confirm Password"
-                            className="login-input"
-                            id="password2"
-                        />
-                        <div className="session-errors">{this.renderErrors("password2")}</div>
-                       <input type="submit" value="Submit" className="session-submit"/>
-                       
-                       <p className="session-footer">Already have an account? &nbsp;
+                                onChange={this.update('password2')}
+                                placeholder="Confirm Password"
+                                className="login-input"
+                                id="password2"
+                            />
+                            <div className="session-errors">{this.renderErrors("password2")}</div>
+                            <input type="submit" value="Submit" className="session-submit" />
+
+                            <p className="session-footer">Already have an account? &nbsp;
                        <button
-                             className="session-footer-button"
-                             type="button"
-                             onClick={() => this.props.history.push('/login')}>Login
+                                    className="session-footer-button"
+                                    type="button"
+                                    onClick={() => this.props.history.push('/login')}>Login
                        </button>.
                        </p>
-                       <p className="session-footer">
-                          Can't commit? Explore our site with a &nbsp;
+                            <p className="session-footer">
+                                Can't commit? Explore our site with a &nbsp;
                        <button
-                             className="session-footer-button"
-                             type="button"
-                             onClick={this.handleDemoSubmit}
-                          >
-                             demo login
+                                    className="session-footer-button"
+                                    type="button"
+                                    onClick={this.handleDemoSubmit}
+                                >
+                                    demo login
                        </button>
-                  </p>
-                    </div>
-                </form>
-            </div>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+              </div>
+
         );
     }
 }

@@ -3,6 +3,9 @@ body {
 }
 
 .session-form {
+   position: absolute;
+   top: 220px;
+   left: 35%;
    width: 400px;
    background-color: #fafafa;
    box-sizing: border-box;

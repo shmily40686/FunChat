@@ -1,0 +1,98 @@
+.ChosePeopleIndex {
+    min-height:100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel {
+      background:#07c160;
+      box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+      color:white;
+      text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+      text-align: center;
+      align-items:center;
+      transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+      font-size: 20px;
+      background-size:cover;
+      background-position:center;
+      flex:1;
+      display: flex;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+.panel > * {
+      margin:0;
+      width: 100%;
+      transition:transform 0.5s;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+    }
+
+.panel1 { background-image:url(https://i.pinimg.com/originals/87/5b/05/875b056022175a185f0eeaedd4c92d3e.jpg); }
+.panel2 { background-image:url(https://www.intrepidtravel.com/adventures/wp-content/uploads/2017/06/Guanajuato-1170x781.jpg); }
+.panel3 { background-image:url(https://medizin-und-technik.industrie.de/wp-content/uploads/m/e/med0517_Japan_F39C19EA-EE14-4FE0-B7C5-044697C51F39.jpg); }
+.panel4 { background-image:url(https://images.unsplash.com/photo-1573906208264-0cc0b5e4f0e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80); }
+.panel5 { background-image:url(https://live.staticflickr.com/4559/24192479807_6f33bc4fa1_b.jpg); }
+
+    .panel > * {
+      margin:0;
+      width: 100%;
+      transition:transform 0.5s;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+    }
+    .panel.open {
+      font-size:40px;
+      flex:4;
+    }
+
+    .description {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .description > button {
+        background-color: #07c160;
+        border-color: #07c160;
+        text-decoration: none;
+        color: #ffffff;
+        display: inline-block;
+        margin-bottom: 15px;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        white-space: nowrap;
+        padding: 8px 15px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.35135;
+        border-radius: 5px;
+        margin-right: 10px;
+        outLine: none;
+    }
+
+    .panel > *:first-child {
+      transform: translateY(-100%);
+    }
+    .panel.open-active >*:first-child{
+      transform: translateY(0);
+    }
+
+    .panel > *:last-child {
+      transform: translateY(100%);
+    }
+    .panel.open-active >*:last-child{
+      transform: translateY(0);
+    }

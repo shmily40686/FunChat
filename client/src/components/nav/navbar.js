@@ -1,7 +1,7 @@
 import React from 'react';
 import './navbar.css';
 import { withRouter } from 'react-router';
-import { faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -49,7 +49,8 @@ class NavBar extends React.Component {
     render() {
         return (
             <div className="nav-bar-container">
-                <img alt='' src='./logo.png' style={{ width: "60px", height: "60px", marginLeft:"20px" }} />
+                {/* <img alt='' src='./logo.png' style={{ width: "60px", height: "60px", marginLeft: "20px" }} /> */}
+                <img alt='' src='./logo-word.png' style={{ width: "300px", height: "280px", marginTop: "58px", cursor:"pointer" }}  onClick={() => this.backToHome()}/>
                 <div className="user-box">
                     {
                         this.props.loggedIn ?

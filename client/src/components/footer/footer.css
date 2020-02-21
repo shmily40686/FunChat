@@ -1,0 +1,24 @@
+.footer { 
+    height: 100px;
+    background-color: rgb(243, 243, 243);
+    border-top: 1px solid #e0e0e0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    color: #313131;
+}
+
+.work-icon {
+    font-size: 30px;
+    margin-left: 20px;
+} 
+
+.copy-right {
+    margin-right: 20px;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+.link {
+    text-decoration: none ;
+    color: #313131;
+}
