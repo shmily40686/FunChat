@@ -6,6 +6,31 @@ import './home.css'
 class Home extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            color: ["#313131", "#47534d", "#7b8580", "#a0a8a4", "#98c4ae", "#69b890", "#348b5f", "#1f5a3c", "#0d1c14", "#000000"],
+            current: 0,
+            changeColor:null
+        }
+        this.changeColorForText = this.changeColorForText.bind(this)
+    }
+
+    componentDidMount() {
+        this.changeColorForText()
+    }
+
+
+    changeColorForText() {
+        let that = this
+       window.changeColor = setInterval(() => {
+           let index = (that.state.current + 1) % that.state.color.length
+            that.setState({
+                current: index
+            })
+       },1000)
+    }
+
+    componentWillUnmount() {
+        clearInterval(window.changeColor)
     }
 
 
@@ -18,8 +43,12 @@ class Home extends React.Component {
                     </video>
                 </div>
                 <div className="title-box">
-                    <div className="title">Start a conversation with the world!</div>
-                    <Link to='/chosePeople' className="link-go">GO</Link>
+                    <div id="title" style={{ color: `${this.state.color[this.state.current]}`}}>Start a conversation with the world!</div>
+                    {
+                        this.props.loggedIn?
+                        <Link to='/chosePeople' className="link-go">Let's go</Link>
+                        : <Link to='/login' className="link-go">Let's go</Link>
+                    }
                 </div>
             </div>
         );
