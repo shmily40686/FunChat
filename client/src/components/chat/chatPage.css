@@ -1,17 +1,55 @@
+.chatPageIndex {
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+}
+
 .chat {
     display: flex;
 }
 
+.chat-header {
+  background-color: #07c160;
+  color: white;
+  font-size: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .friendList {
-    border: 1px solid black;
-    height: 300px;
-    width: 300px;
+  border: 1px solid #e0e0e0;
+  height: 500px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: rgb(243, 243, 243);
+}
+
+.friend-list-enter {
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  margin:20px;
+}
+
+.list-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+}
+
+.chat-box {
+  border: 1px solid #e0e0e0;
+  height: 500px;
+  width: 400px;
+  border-radius: 5px;
+  background-color: rgb(243, 243, 243);
 }
 
 .chatRoom {
-   border: 1px solid black;
    min-height: 300px;
-   width: 300px; 
+   /* width: 300px;  */
 }
 
 .form {
@@ -21,10 +59,11 @@
 
 .input {
   border: none;
-  border-radius: 0;
+  border-radius: 5px;
   padding: 5%;
   width: 80%;
   font-size: 1.2em;
+  border-bottom: 2px solid #d7d7d7;
 }
 
 input:focus, textarea:focus, select:focus{
@@ -35,7 +74,7 @@ input:focus, textarea:focus, select:focus{
   color: #fff !important;
   text-transform: uppercase;
   text-decoration: none;
-  background: #2979FF;
+  background: #07c160;
   padding: 20px;
   display: inline-block;
   border: none;
@@ -45,8 +84,8 @@ input:focus, textarea:focus, select:focus{
   
 .messages {
   padding: 5% 0;
-  overflow: auto;
-  /* flex: auto; */
+  overflow-y:auto;
+  height: 345px;
 }
 
 .messageBox {
@@ -110,7 +149,7 @@ input:focus, textarea:focus, select:focus{
 }
 
 .backgroundBlue {
-  background: #2979FF;
+  background: #07c160;
 }
 
 .backgroundLight {

@@ -38,17 +38,26 @@ class chatPageIndex extends React.Component {
             <div>
                 <div className="chatPageIndex">
                     <div className="chat">
-                        <div className="friendList">{
+                        <div className="friendList">
+                        <div className="chat-header">Friend List</div>
+                        {
                             this.props.user ?
                             this.props.user.data.contacts.map((friend,i) => (
-                                <li key={i} onClick={() => this.update(friend._id)}>{friend.username}</li>
-                            )) :
-                            null
-                        }</div>
-                        { this.state.room ? 
-                            <ChatRoom room={this.state.room} name={this.state.name} />
-                            :<div className="chatRoom">Not room</div>
+                                <li  className="friend-list-enter"key={i} onClick={() => this.update(friend._id)}>
+                                    <img className="list-img" src={friend.picture}></img>
+                                    <div style={{marginLeft:"20px", fontSize:"18px"}}>{friend.username}</div>
+                                </li>
+                            )) 
+                            : null
                         }
+                        </div>
+                        <div className="chat-box">
+                            <div className="chat-header">Chat Room</div>
+                            {this.state.room ?
+                                <ChatRoom room={this.state.room} name={this.state.name} />
+                                : <div className="chatRoom">Not room</div>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>

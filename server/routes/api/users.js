@@ -29,8 +29,9 @@ router.get('/:user_id', async (req, res) => {
 })
 
 
-router.get('/:languages',async (req,res) => {
-    const users = await users.find({
+router.get('/languages/:languages',async (req,res) => {
+    console.log('Request at languages');
+    const users = await User.find({
         languages: req.params.languages
     })
     res.status(200).json(users);
@@ -113,6 +114,22 @@ router.post('/login', async (req, res) => {
                     }
                 })
         })
+})
+
+router.post('/add', async (req, res) => { 
+    const id = req.body.id
+    const friend = req.body.friend
+    console.log("id",id)
+    console.log("friend",friend)
+    await User.updateOne(
+        { _id: id },
+        { $push: { contacts: friend } }
+    );
+    await User.updateOne(
+        { _id: friend },
+        { $push: { contacts: id } }
+    );
+    res.status(200).json("add it!");
 })
 
 module.exports = router;

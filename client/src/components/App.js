@@ -9,7 +9,7 @@ import LogInFormContainer from './session_form/login_form_container'
 import SignUpFormContainer from './session_form/signup_form_container'
 import HomeContainer from './home/home_container'
 import NavBarContainer from "./nav/navbar_container";
-import ChosePeopleIndex from "./chosePeople/chosePeopleIndex"
+import ChosePeopleIndexContainer from "./chosePeople/chosePeopleIndex_container"
 import chatPageIndexContainer from './chat/chatPageIndex_container'
 import SelectPageContainer from './chosePeople/selectPage_container'
 import Footer from './footer/footer';
@@ -25,7 +25,7 @@ const App = ({store}) => (
 					<AuthRoute exact path="/login" component={LogInFormContainer} />
 					<AuthRoute exact path="/signup" component={SignUpFormContainer} />
 					<ProtectedRoute path="/select" component={SelectPageContainer} />
-					<ProtectedRoute path="/chosePeople" component={ChosePeopleIndex} />
+					<ProtectedRoute path="/chosePeople" component={ChosePeopleIndexContainer} />
 					<ProtectedRoute path="/chatPage" component={chatPageIndexContainer} />
 					<Route exact path="/" component={HomeContainer} />
 				</Switch>

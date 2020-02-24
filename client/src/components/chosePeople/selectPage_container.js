@@ -7,7 +7,8 @@ import SelectPage from './selectPage';
 const mapStateToProps = state => ({
     userId: state.session.user.id,
     user: state.users.user,
-    users: state.users.users
+    users: state.users.users,
+    language: state.language.language
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -29,8 +29,8 @@ io.on('connection', function (socket) {
 		console.log('added a user');
 		socket.join(room);
 
-		socket.emit('message', { user: 'admin', text: `${name}, welcome to room ${room}.` });
-		socket.broadcast.to(room).emit('message', { user: 'admin', text: `${name} has joined!` });
+		// socket.emit('message', { user: 'admin', text: `${name}, welcome to room ${room}.` });
+		// socket.broadcast.to(room).emit('message', { user: 'admin', text: `${name} has joined!` });
 
 		io.to(room).emit('roomData', { room: room, users: getUsersInRoom(room) });
 
@@ -49,10 +49,6 @@ io.on('connection', function (socket) {
 	socket.on('unsubscribe', () => {
 		console.log('disconnecting', socket.id);
 		const user = removeUser(socket.id);
-
-		// socket.rooms.forEach(function (room) {
-		// 	io.in(room).emit('user:disconnect', { id: socket.id });
-		// });
 
 		console.log('user: ', user);
 		if (user) {

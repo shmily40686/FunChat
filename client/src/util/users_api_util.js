@@ -5,5 +5,9 @@ export const fetchAUser = (userId) => {
 };
 
 export const fetchUsers = (languages) => {
-    return axios.get(`/api/users/${languages}`)
+    return axios.get(`/api/users/languages/${languages}`)
+}
+
+export const addFriend = (data) => {
+    return axios.post('/api/users/add',data)
 }
