@@ -7,16 +7,17 @@ const addUser = ({ id, name, room }) => {
     const existingUser = users.find((user) => user.room === room && user.name === name);
 
     if (!name || !room) return { error: 'Username and room are required.' };
-    if (existingUser) return { error: 'Username is taken.' };
-    
+    // if (existingUser) return { error: 'Username is taken.' };
+    if(!existingUser) {
+        const user = { id, name, room };
 
-    const user = { id, name, room };
-
-    users.push(user);
-    console.log('users ~~~~~~~~~~~');
-    console.log(users);
-
-    return { user };
+        users.push(user);
+        console.log('users ~~~~~~~~~~~');
+        console.log(users);
+        return { user };
+    } else {
+        return
+    }
 }
 
 const removeUser = (id) => {

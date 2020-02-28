@@ -96,3 +96,64 @@
     .panel.open-active >*:last-child{
       transform: translateY(0);
     }
+
+.cards-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  margin: 15px 30px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 2.5px 10px rgba(48,48,48,.6);
+  -webkit-transition: box-shadow .65s;
+  transition: box-shadow .65s;
+  font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+.head-img {
+  background-color: rgb(231, 231, 231);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  width:300px;
+}
+
+.card-add-button {
+  background-color: #07c160;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  padding: 8px 15px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.35135;
+  border-radius: 5px;
+  margin-right: 10px;
+  outLine:none;
+  font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+.username {
+  align-self: flex-start;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
