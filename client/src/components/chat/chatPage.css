@@ -1,7 +1,9 @@
 .chatPageIndex {
-  display: flex;
-  justify-content: center;
-  margin: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px;
 }
 
 .chat {
@@ -20,10 +22,11 @@
 
 .friendList {
   border: 1px solid #e0e0e0;
-  height: 500px;
+  height: 520px;
   width: 200px;
   border-radius: 5px;
   background-color: rgb(243, 243, 243);
+  overflow-y: auto;
 }
 
 .friend-list-enter {
@@ -41,8 +44,8 @@
 
 .chat-box {
   border: 1px solid #e0e0e0;
-  height: 500px;
-  width: 400px;
+  height: 520px;
+  min-width: 500px;
   border-radius: 5px;
   background-color: rgb(243, 243, 243);
 }
@@ -154,4 +157,25 @@ input:focus, textarea:focus, select:focus{
 
 .backgroundLight {
   background: #F3F3F3;
+}
+
+.choseLang {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.choseLang-inner {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+    -moz-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    -webkit-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+    font-size: 20px;
+    color: #313131;
 }
