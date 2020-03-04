@@ -12,7 +12,7 @@ const users = require("./routes/api/users");
 const app = express();
 const server = http.createServer(app)
 const io = socketio(server)
-const port = process.env.Port || 3000;
+const port = process.env.PORT || 3000;
 
 const root = __dirname + '/../client/dist';
 
