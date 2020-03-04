@@ -139,7 +139,12 @@ class chatPageIndex extends React.Component {
                             <div className="chat-header">Chat Room</div>
                             {this.state.room ?
                                 <ChatRoom room={this.state.room} name={this.state.name} from={this.state.selectValue} to={this.state.selectValue2}/>
-                                : <div className="chatRoom">Not room</div>
+                                : <div className="chatRoom">
+                                    <div className="chatRoom-hold">
+                                        <div>Let's start a conversation</div>
+                                        <img alt='' src='./logo.png' style={{ width: "170px", height: "160px", marginTop: "40px" }} />
+                                    </div>
+                                </div>
                             }
                         </div>
                     </div>
