@@ -22,9 +22,9 @@ io.on('connection', function (socket) {
 	socket.on('join', ({name, room}, callback) => {
 		console.log("name",name)
 		console.log("room", room)
-		const { error, user } = addUser({ id: socket.id, name, room });
+		addUser({ id: socket.id, name, room });
 
-		if (error) return callback(error);
+		// if (error) return callback(error);
 
 		console.log('added a user');
 		socket.join(room);
@@ -41,9 +41,10 @@ io.on('connection', function (socket) {
 	socket.on('sendMessage', (message, callback) => {
 		const user = getUser(socket.id);
 
-		io.to(user.room).emit('message', { user: user.name, text: message });
-
-		callback();
+		if (user && user.room) {
+			io.to(user.room).emit('message', { user: user.name, text: message });
+			callback();
+		}
 	});
 
 	socket.on('unsubscribe', () => {
@@ -53,7 +54,7 @@ io.on('connection', function (socket) {
 		console.log('user: ', user);
 		if (user) {
 			console.log('disconnected', socket.id);
-			io.to(user.room).emit('message', { user: 'Admin', text: `${user.name} has left.` });
+			// io.to(user.room).emit('message', { user: 'Admin', text: `${user.name} has left.` });
 			io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
 		}
 	})

@@ -3,9 +3,10 @@ import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 import Messages from './Messages';
 import Input from './input';
+import { Message } from "semantic-ui-react";
 
-
-let socket;
+const ENDPOINT = 'http://localhost:3000/';
+const socket = io(ENDPOINT);
 
 const ChatRoom = (props) => {
     const [name, setName] = useState(props.name);
@@ -13,11 +14,16 @@ const ChatRoom = (props) => {
     const [users, setUsers] = useState('');
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
-    const ENDPOINT = 'http://localhost:3000/';
 
+    socket.on('roomData', ({ users }) => {
+        setUsers(users);
+    })
+
+    socket.on('message', (message) => {
+        setMessages([...messages, message]);
+    });
 
     useEffect(() => {
-        socket = io(ENDPOINT);
 
         if (room !== props.room) {
             console.log('resetting messages');
@@ -47,23 +53,14 @@ const ChatRoom = (props) => {
     //     socket.off();
     // })
 
-    useEffect(() => {
-        socket.on('message', (message) => {
-            setMessages([...messages, message]);
-        });
-
-        socket.on('roomData', ({ users }) => {
-            setUsers(users);
-        })
-
-    }, [messages])
-
     const sendMessage = (event) => {
         event.preventDefault();
         fetch(`https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20200227T232649Z.227c7c18df34770b.9dbbb7beab7bb444f0d1c8295d51d970826edd10&text=${message}&lang=${props.from}-${props.to}`)
         .then((res) => res.json())
         .then((data) => {
-            socket.emit('sendMessage', data.text[0], () => setMessage(''));
+            socket.emit('sendMessage', data.text[0], () => {
+                setMessage('')
+            });
             console.log(message, messages)
             console.dir(data)
         })
