@@ -1,4 +1,5 @@
 import React from 'react';
+import SelectGroupContainer from './selectGroup_container'
 import { Link } from 'react-router-dom'
 import './home.css'
 
@@ -50,6 +51,8 @@ class Home extends React.Component {
                         : <Link to='/login' className="link-go">Let's go</Link>
                     }
                 </div>
+                <div className="mid-div"></div>
+                <SelectGroupContainer />
             </div>
         );
     }
