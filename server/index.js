@@ -28,7 +28,6 @@ io.on('connection', function (socket) {
 
 		console.log('added a user');
 		socket.join(room);
-
 		// socket.emit('message', { user: 'admin', text: `${name}, welcome to room ${room}.` });
 		// socket.broadcast.to(room).emit('message', { user: 'admin', text: `${name} has joined!` });
 
@@ -40,7 +39,11 @@ io.on('connection', function (socket) {
 
 	socket.on('sendMessage', (message, callback) => {
 		const user = getUser(socket.id);
-
+		// console.log("message",message,user,user.room)
+		console.log('got a message for ya, big chief');
+		console.log(user);
+		console.log(user.room);
+		console.log(message);
 		if (user && user.room) {
 			io.to(user.room).emit('message', { user: user.name, text: message });
 			callback();
