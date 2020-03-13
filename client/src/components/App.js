@@ -12,6 +12,8 @@ import NavBarContainer from "./nav/navbar_container";
 import ChosePeopleIndexContainer from "./chosePeople/chosePeopleIndex_container"
 import chatPageIndexContainer from './chat/chatPageIndex_container'
 import SelectPageContainer from './chosePeople/selectPage_container'
+import GroupChatRoomContainer from './groupChat/groupChatRoom_container'
+import GroupSelectContainer from './groupChat/groupSelectRoom_container'
 import Footer from './footer/footer';
 
 const App = ({store}) => (
@@ -27,6 +29,8 @@ const App = ({store}) => (
 					<ProtectedRoute path="/select" component={SelectPageContainer} />
 					<ProtectedRoute path="/chosePeople" component={ChosePeopleIndexContainer} />
 					<ProtectedRoute path="/chatPage" component={chatPageIndexContainer} />
+					<ProtectedRoute path="/groupChat" component={GroupChatRoomContainer} />
+					<ProtectedRoute path="/groupSelect" component={GroupSelectContainer} />
 					<Route exact path="/" component={HomeContainer} />
 				</Switch>
 				<Footer />

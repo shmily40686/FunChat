@@ -47,6 +47,7 @@ class ChosePeopleIndex extends React.Component {
     render() {
         return (
             <div>
+                <div className="select-header">chose the languages you want the people speak! </div>
                 <div className="ChosePeopleIndex">
                     <div className={`panel panel5`} ref={el => this.panel5 = el} onClick={(e) => this.toggleOpen(e)} data-index="5">
                        <p>hello</p>
