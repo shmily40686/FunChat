@@ -45,11 +45,12 @@ class Home extends React.Component {
                 </div>
                 <div className="title-box">
                     <div id="title" style={{ color: `${this.state.color[this.state.current]}`}}>Start a conversation with the world!</div>
-                    {
+                    {/* {
                         this.props.loggedIn?
                         <Link to='/chosePeople' className="link-go">Let's go</Link>
                         : <Link to='/login' className="link-go">Let's go</Link>
-                    }
+                    } */}
+                    <div className="home-subtitle">We help people bala bala balala balallalalla balala balallalalla balala balallalalla balala balallalalla......</div>
                 </div>
                 <div className="mid-div"></div>
                 <SelectGroupContainer />
