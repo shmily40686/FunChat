@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     color: #313131;
+    margin-top: 40px;
 }
 
 .work-icon {

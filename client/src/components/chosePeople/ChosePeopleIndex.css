@@ -1,5 +1,5 @@
 .ChosePeopleIndex {
-    min-height:100vh;
+    min-height:80vh;
     overflow: hidden;
     display: flex;
 }
@@ -153,4 +153,21 @@
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.select-header {
+    height: 130px;
+    background-color: rgb(233, 239, 231);
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #313131;
+    font-size: 30px;
+    font-weight: 600;
+    -moz-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    -webkit-transition: all 1s ease-in;
+    transition: all 1s ease-in;
 }

@@ -8,7 +8,7 @@ import { Message } from "semantic-ui-react";
 const ENDPOINT =
     process.env.NODE_ENV === 'production'
         ? window.location.hostname
-        : 'https://localhost:5000';
+        : 'http://localhost:3000';
 const socket = io(ENDPOINT);
 
 const ChatRoom = (props) => {
