@@ -79,7 +79,7 @@ class ChosePeopleIndex extends React.Component {
         return (
             <div>
                 <div className="select-header1"></div>
-                <div className="select-header">chose the languages you want the people speak! </div>
+                <div className="select-header" style={{ color: `${this.state.color[this.state.current]}` }}>Select a foreign language</div>
                 <div className="ChosePeopleIndex">
                     <div className={`panel panel5`} ref={el => this.panel5 = el} onClick={(e) => this.toggleOpen(e)} data-index="5">
                        <p>hello</p>
@@ -102,7 +102,7 @@ class ChosePeopleIndex extends React.Component {
                         <p className="description"><button data-language="Japanese" onClick={(e) => this.selectLanguage(e)}>SELECT</button>Japanese is an agglutinative, mora-timed language with simple phonotactics, a pure vowel system, phonemic vowel and consonant length, and a lexically significant pitch-accent.</p>
                     </div>
                     <div className={`panel panel4`} ref={el => this.panel4 = el} onClick={(e) => this.toggleOpen(e)} data-index="4">
-                        <p>Hallo</p>
+                        <p>hallo</p>
                         <p>German</p>
                         <p className="description"><button data-language="German" onClick={(e) => this.selectLanguage(e)}>SELECT</button>German is a West Germanic language that is mainly spoken in Central Europe. It is the most widely spoken and official or co-official language in Germany, Austria, Switzerland, South Tyrol in Italy, the German-speaking Community of Belgium and Liechtenstein.</p>
                     </div>

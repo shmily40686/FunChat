@@ -101,7 +101,7 @@ class chatPageIndex extends React.Component {
                 <div className="chatPageIndex">
                     <div className="choseLang">
                         <div className="choseLang-inner">
-                            <h3 className="title" style={{ color: `${this.state.color[this.state.current]}` }}>Which language do you speak?  </h3>
+                            <h3 className="title" style={{ color: `${this.state.color[this.state.current]}` }}>Origin language</h3>
                             <select onChange={this.handleChange} value={this.state.selectValue} >
                                 <option value="en">English</option>
                                 <option value="zh">Mandarin</option>
@@ -111,7 +111,7 @@ class chatPageIndex extends React.Component {
                             </select>
                         </div>
                         <div className="choseLang-inner">
-                            <h3 className="title" style={{ color: `${this.state.color[this.state.current]}`, marginLeft: "30px" }}>What would you like to translate to?  </h3>
+                            <h3 className="title" style={{ color: `${this.state.color[this.state.current]}`, marginLeft: "30px" }}>Translated language</h3>
                             <select onChange={this.handleChange2} value={this.state.selectValue2} >
                                 <option value="en">English</option>
                                 <option value="zh">Mandarin</option>
@@ -123,7 +123,7 @@ class chatPageIndex extends React.Component {
                     </div>
                     <div className="chat">
                         <div className="friendList">
-                        <div className="chat-header">Friend List</div>
+                        <div className="chat-header">Friends List</div>
                         {
                             this.props.user ?
                             this.props.user.data.contacts.map((friend,i) => (
@@ -141,7 +141,7 @@ class chatPageIndex extends React.Component {
                                 <ChatRoom room={this.state.room} name={this.state.name} from={this.state.selectValue} to={this.state.selectValue2}/>
                                 : <div className="chatRoom">
                                     <div className="chatRoom-hold">
-                                        <div>Let's start a conversation</div>
+                                        <div>Start a conversation</div>
                                         <img alt='' src='./logo.png' style={{ width: "170px", height: "160px", marginTop: "40px" }} />
                                     </div>
                                 </div>
