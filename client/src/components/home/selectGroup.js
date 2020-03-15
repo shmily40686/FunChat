@@ -10,10 +10,10 @@ class SelectGroup extends React.Component {
         return (
             <div className="selectBox">
                 <div className="chose-box1">
-                    <div className="text-title">Join A Group Room</div>
+                    <div className="text-title">Join a Group</div>
                     <div>
                         <img alt='' src='./chat2.png' style={{ width: "250px", height: "240px", marginTop: "60px", marginBottom:"60px" }} />
-                        <div className="text">you can choose a group languese people to talk.. balalalla</div>
+                        <div className="text">Choose which language you wish to speak</div>
                     </div>
                     {
                         this.props.loggedIn ?
@@ -22,10 +22,10 @@ class SelectGroup extends React.Component {
                     }
                 </div>
                 <div className="chose-box2">
-                    <div className="text-title">Talk with A Foreign Friend</div>
+                    <div className="text-title">Chat with a friend</div>
                     <div>
                         <img alt='' src='./chat1.png' style={{ width: "250px", height: "240px", marginTop: "60px", marginBottom:"60px" }} />
-                        <div className="text">add a foreign friend, make you and him have no problem to talk..balalalla</div>
+                        <div className="text">Add a friend based on their language</div>
                     </div>
                     {
                         this.props.loggedIn ?
