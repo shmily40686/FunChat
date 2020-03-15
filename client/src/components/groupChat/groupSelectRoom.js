@@ -21,6 +21,16 @@ class GroupSelect extends React.Component {
     componentDidMount() {
         this.props.fetchUser(this.props.userId)
         this.changeColorForText()
+        const backgroundImg = document.getElementsByClassName("select-header1")[0]
+        const headerWord = document.getElementsByClassName("select-header")[0]
+        setTimeout(() => {
+            backgroundImg.style.backgroundSize = "320px 130px"
+        },500)
+
+        setTimeout(() => {
+            // headerWord.style.height = "60px"
+            headerWord.style.fontSize ="30px"
+        }, 1800)
     }
 
 
@@ -70,6 +80,7 @@ class GroupSelect extends React.Component {
     render() {
         return (
             <div>
+                <div className="select-header1"></div>
                 <div className="select-header" style={{ color: `${this.state.color[this.state.current]}` }}>chose the room you would like to join it </div>
                 <div className="ChosePeopleIndex">
                     <div className={`panel panel5`} ref={el => this.panel5 = el} onClick={(e) => this.toggleOpen(e)} data-index="5">

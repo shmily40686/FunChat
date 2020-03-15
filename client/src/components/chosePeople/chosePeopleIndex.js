@@ -9,7 +9,10 @@ class ChosePeopleIndex extends React.Component {
         super(props)
         this.state = {
             open: "",
-            active: ""
+            active: "",
+            color: ["#313131", "#47534d", "#7b8580", "#a0a8a4", "#98c4ae", "#69b890", "#348b5f", "#1f5a3c", "#0d1c14", "#000000"],
+            current: 0,
+            changeColor: null
         }
         this.toggleOpen = this.toggleOpen.bind(this)
         this.selectLanguage = this.selectLanguage.bind(this)
@@ -42,11 +45,40 @@ class ChosePeopleIndex extends React.Component {
         })
     }
 
+    componentDidMount() {
+        this.changeColorForText()
+        const backgroundImg = document.getElementsByClassName("select-header1")[0]
+        const headerWord = document.getElementsByClassName("select-header")[0]
+        setTimeout(() => {
+            backgroundImg.style.backgroundSize = "320px 130px"
+        }, 500)
+
+        setTimeout(() => {
+            // headerWord.style.height = "60px"
+            headerWord.style.fontSize = "30px"
+        }, 1800)
+    }
+
+    changeColorForText() {
+        let that = this
+        window.changeColor = setInterval(() => {
+            let index = (that.state.current + 1) % that.state.color.length
+            that.setState({
+                current: index
+            })
+        }, 1000)
+    }
+
+    componentWillUnmount() {
+        clearInterval(window.changeColor)
+    }
+
     
 
     render() {
         return (
             <div>
+                <div className="select-header1"></div>
                 <div className="select-header">chose the languages you want the people speak! </div>
                 <div className="ChosePeopleIndex">
                     <div className={`panel panel5`} ref={el => this.panel5 = el} onClick={(e) => this.toggleOpen(e)} data-index="5">

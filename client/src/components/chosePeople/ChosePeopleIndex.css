@@ -155,19 +155,39 @@
   margin-bottom: 10px;
 }
 
-.select-header {
+.select-header1 {
     height: 130px;
-    background-color: rgb(233, 239, 231);
+    background: url('../../../dist/talking.png');
+    background-size: 400px 10px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-color: rgb(255, 255, 255);
     border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
     align-items: center;
     display: flex;
     justify-content: center;
     color: #313131;
     font-size: 30px;
     font-weight: 600;
+    -moz-transition: all 1.5s ease-in;
+    -o-transition: all 1.5s ease-in;
+    -webkit-transition: all 1.5s ease-in;
+    transition: all 1.5s ease-in;
+    margin-bottom: 10px;
+}
+
+.select-header {
+    height: 60px;
+    background-color:rgb(255, 255, 255);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #313131;
+    font-size: 0px;
+    font-weight: 600;
     -moz-transition: all 1s ease-in;
     -o-transition: all 1s ease-in;
     -webkit-transition: all 1s ease-in;
     transition: all 1s ease-in;
+    margin-bottom: 10px;
 }
