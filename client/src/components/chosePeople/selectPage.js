@@ -45,7 +45,7 @@ class SelectPage extends React.Component {
                                         <img className="head-img" src={person.picture}></img>
                                         <div style={{ display: "flex", flexDirection: "column" }}>
                                             <div className="username">{person.username}</div>
-                                            <div className="languages">Speak languages : {
+                                            <div className="languages">Speaks: {
                                                 person.languages.map((each, i) => (
                                                     <div  key={i} style={{ marginLeft: "10px" }}>{each}</div>
                                                 ))

@@ -89,7 +89,7 @@ const GroupChatRoom = (props) => {
         <div className="outerContainer">
             <div className="room-title">{room.toUpperCase()}</div>
             <div className="choseLang-inner">
-                <h3 className="title">Which language do you speak?  </h3>
+                <h3 className="title">Translate which language to {room.charAt(0).toUpperCase()}{room.substr(1).toLowerCase()}?</h3>
                 <select onChange={(e) => setSelectValue(e.target.value)}>
                     <option value="en">English</option>
                     <option value="zh">Mandarin</option>
