@@ -106,7 +106,7 @@ class GroupSelect extends React.Component {
                     <div className={`panel panel4`} ref={el => this.panel4 = el} onClick={(e) => this.toggleOpen(e)} data-index="4">
                         <p>hallo</p>
                         <p>German</p>
-                        <p className="description"><button data-language="German" onClick={(e) => this.selectLanguage(e)}>SELECT</button>German is a West Germanic language that is mainly spoken in Central Europe. It is the most widely spoken and official or co-official language in Germany, Austria, Switzerland, South Tyrol in Italy, the German-speaking Community of Belgium and Liechtenstein.</p>
+                        <p className="description"><button data-language="German" onClick={(e) => this.selectLanguage(e)}>SELECT</button>German is a West Germanic language that is mainly spoken in Central Europe.</p>
                     </div>
                 </div>
             </div>

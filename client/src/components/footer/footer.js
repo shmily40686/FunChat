@@ -9,8 +9,8 @@ class Footer extends React.Component {
             <div>
                 <div className="footer">
                     <div>
-                        <a href="https://www.linkedin.com/in/lingxiaowen/" className="link"><FontAwesomeIcon icon={faGithub} className="work-icon" /></a>
-                        <a href="https://github.com/shmily40686" className="link"> <FontAwesomeIcon icon={faLinkedin} className="work-icon" /></a>
+                        <a href="https://www.linkedin.com/in/lingxiaowen/" className="link linkedin"><FontAwesomeIcon icon={faLinkedin} className="work-icon" /></a>
+                        <a href="https://github.com/shmily40686" className="link github"> <FontAwesomeIcon icon={faGithub} className="work-icon" /></a>
                     </div>
                     <span className="copy-right">© Fun Chat, 2020</span>
                 </div>

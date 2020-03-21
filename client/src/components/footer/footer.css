@@ -6,13 +6,22 @@
     display: flex;
     justify-content: space-between;
     color: #313131;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
 .work-icon {
-    font-size: 30px;
+    font-size: 35px;
     margin-left: 20px;
-} 
+    transition: .3s;
+}
+
+.linkedin:hover {
+    color: #2d66c9;
+}
+
+.github:hover {
+    color: #883388;
+}
 
 .copy-right {
     margin-right: 20px;

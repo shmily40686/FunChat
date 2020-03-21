@@ -38,6 +38,7 @@ class Home extends React.Component {
     render() {
         return (
             <div>
+                <div className="cover"></div>
                 <div className="background-video">
                     <video loop autoPlay muted >
                         <source src='//res.wx.qq.com/a/wx_fed/wechat-main-page-frontend/res/static/res/1QzwDFl.mp4' type="video/mp4" />
