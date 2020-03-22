@@ -42,11 +42,13 @@ io.on('connection', function (socket) {
 		// console.log("message",message,user,user.room)
 		console.log('got a message for ya, big chief');
 		console.log(user);
-		console.log(user.room);
-		console.log(message);
-		if (user && user.room) {
-			io.to(user.room).emit('message', { user: user.name, text: message });
-			callback();
+		if (user) {
+			console.log(user.room);
+			console.log(message);
+			if (user && user.room) {
+				io.to(user.room).emit('message', { user: user.name, text: message });
+				callback();
+			}
 		}
 	});
 
