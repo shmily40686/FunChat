@@ -3,7 +3,7 @@
 
 ## What is Fun Chat?
 
-Fun Chat is an international chat application with built in translation services. This allows users to write in a preferred language and translate to a foreign language. This makes it easier than ever to communicate with peopel from different backgrounds and different nationalities.
+Fun Chat is an international chat application with built in translation services. This allows users to write in a preferred language and translate to a foreign language. This makes it easier than ever to communicate with people from different backgrounds and different nationalities.
 
 ## Fun Chat Features
 
@@ -13,11 +13,11 @@ Fun Chat is an international chat application with built in translation services
    * Fun Chat offers support for Emojis.
   
  * Unique categorization of contacts
-   * Contacts are chosen by their spoken languages.
+   * Contacts are categorized by their spoken languages.
    * Additional spoken languages are displayed for each user.
  
  * Group chat
-   * Offers a single group chat with many users which translates to a single language.
+   * Offers a single group chat with many users translating to a single language.
 
 ## Technologies Used
 
