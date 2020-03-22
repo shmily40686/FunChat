@@ -58,15 +58,16 @@ const ChatRoom = (props) => {
 
     const sendMessage = (event) => {
         event.preventDefault();
+        if (!message) return;
+
         fetch(`https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20200227T232649Z.227c7c18df34770b.9dbbb7beab7bb444f0d1c8295d51d970826edd10&text=${message}&lang=${props.from}-${props.to}`)
-        .then((res) => res.json())
-        .then((data) => {
-            socket.emit('sendMessage', data.text[0], () => {
-                setMessage('')
-            });
-            console.log(message, messages)
-            console.dir(data)
-        })
+            .then((res) => res.json())
+            .then((data) => {
+                socket.emit('sendMessage', data.text[0], () => {
+                    setMessage('')
+                });
+            })
+            .catch(err => console.error(err));
     }
 
     return (

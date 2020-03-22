@@ -72,7 +72,7 @@ class GroupSelect extends React.Component {
         promise.then(() => {
             this.props.history.push(`/groupChat?name=${this.props.user.data.username}&room=${room}`)
         })
-        .catch((err) => console.log(err))
+        .catch((err) => console.error(err))
     }
 
 

@@ -30,8 +30,10 @@
   display: flex;
   align-items: center;
   font-family: Helvetica;
-  color: #272727;
+  color: #828282;
   letter-spacing: 0.3px;
+  justify-content: center;
+  width: 25px;
 }
 
 .pl-10 {
@@ -71,5 +73,5 @@
 }
 
 .backgroundLight {
-  background: #F3F3F3;
+  background: #d9d7d7;
 }

@@ -95,6 +95,9 @@ input:focus, textarea:focus, select:focus{
   width: 20%;
 }
 
+.sendButton:focus {
+  outline: none;
+}
   
 .messages {
   padding: 5% 0;
@@ -136,6 +139,8 @@ input:focus, textarea:focus, select:focus{
   font-family: Helvetica;
   color: #828282;
   letter-spacing: 0.3px;
+  justify-content: center;
+  width: 25px;
 }
 
 .pl-10 {
@@ -167,7 +172,7 @@ input:focus, textarea:focus, select:focus{
 }
 
 .backgroundLight {
-  background: #dbdbdb;
+  background: #0bc16038;
 }
 
 .choseLang {
