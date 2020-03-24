@@ -11,6 +11,8 @@ Fun Chat is an international chat application with built in translation services
    * Fun Chat utilizes the immediate speed of web sockets.
    * Messages are instantly translated from an "origin" language to a "destination" language.
    * Fun Chat offers support for Emojis.
+   
+![Translated messaging](images/fun-chat.gif)
   
  * Unique categorization of contacts
    * Contacts are categorized by their spoken languages.
