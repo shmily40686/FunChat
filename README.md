@@ -18,8 +18,13 @@ Fun Chat is an international chat application with built in translation services
    * Contacts are categorized by their spoken languages.
    * Additional spoken languages are displayed for each user.
  
+ ![Selecting language](images/language_select.gif)
+ 
  * Group chat
    * Offers a single group chat with many users translating to a single language.
+   
+ ![Group chat](images/group_chat.gif)
+ 
 
 ## Technologies Used
 
