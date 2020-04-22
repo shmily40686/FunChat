@@ -81,7 +81,7 @@ mongoose
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('frontend/build'));
 	app.get('/', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+		res.sendFile(path.resolve(root, 'index.html'));
 	})
 } else {
 	app.get("/", (req, res) => res.send("Hello World!!"));
@@ -92,6 +92,15 @@ require('./config/passport')(passport);
 
 
 app.use("/api/users", users);
+
+app.get('/*', function (req, res) {
+	console.log('wildcard');
+	res.sendFile(path.resolve(root, 'index.html'), function (err) {
+		if (err) {
+			res.status(500).send(err)
+		}
+	});
+})
 
 server.listen(port, function () {
 	console.log('Listening on port', port);
